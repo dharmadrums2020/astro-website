@@ -1,6 +1,7 @@
 ---
-import logos from '../images/framework-logos.png'
-import logosSmall from '../images/framework-logos-small.png'
+import logos from '../images/banner-lrg-2.png';
+import logosSmall from '../images/glam-banner-small.png';
+
 
 export interface Props {
     heading?: string;
@@ -8,13 +9,14 @@ export interface Props {
     showExtra?: boolean;
 }
 
-const { heading = "Welcome To The Astro Crash Course!", 
-text = "Build super fast HTML-first websites using your favorite JavaScript", showExtra  = false } = Astro.props as Props;
+const { heading = "“MAKE THE IMPOSSIBLE POSSIBLE”", 
+text = "Bespoke yacht charters & personal assistance, live your passion on the ocean & enjoy your life", showExtra  = false } = Astro.props as Props;
 ---
 
  <section class="showcase">
+
       <div class="showcase-text">
-        <h1>{ heading }</h1>
+        <h1 class="showcase-header">{ heading }</h1>
         <p>
           { text }
         </p>
@@ -24,22 +26,26 @@ text = "Build super fast HTML-first websites using your favorite JavaScript", sh
 
 <div class="showcase-img">
         <img class="logos" src={logos} alt="" />
-        <img class="logos-small" src={logosSmall} alt="" />
+       
       </div>
-
-      <p class="showcase-demo">
-        <small>This is a demo website used for the YouTube crash course</small>
-      </p>
+     
 
 </>}
     </section>
 
 <style>
-        .showcase {
-  height: auto;
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&display=swap');
+
+.showcase {
+  height:max-content;
   background-color: var(--color-secondary);
-  background-image: linear-gradient(to bottom, var(--color-primary), rgb(15 23 42 / 0));
-  padding: 30px;
+  /* background-image: linear-gradient(to bottom, var(--color-primary), rgb(15 23 42 / 0)); */
+  background-image: url(../images/hero.png);
+  background-size: cover;
+  background-repeat: none;
+  background-position:0vmax;
+  padding: 150px; 
 }
 
 .showcase-blog {
@@ -47,21 +53,27 @@ text = "Build super fast HTML-first websites using your favorite JavaScript", sh
 }
 
 .showcase-text {
-  max-width: 500px;
+  border-radius:12px;
+  max-width: 1050px;
   color: #fff;
   text-align: center;
-  margin: 50px auto;
+  margin: 120px auto;
+  padding-top:25px;
 }
 
 .showcase h1 {
+  text-shadow: 4px 4px 8px #000;
   font-size: 50px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .showcase p {
+  text-shadow: 1px 1px 3px #000;
+  font-family: 'IM Fell English', serif;
   font-size: 24px;
   margin-bottom: 20px;
+  margin: 0rem 0;
 }
 
 .showcase-img {
@@ -79,4 +91,24 @@ text = "Build super fast HTML-first websites using your favorite JavaScript", sh
   font-weight: 300;
 }
 
+@media (max-width: 960px) {
+.showcase h1 {
+  text-shadow: 4px 4px 8px #000;
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.showcase p {
+  text-shadow: 1px 1px 3px #000;
+  font-family: 'IM Fell English', serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin: 0rem 0;
+}
+
+.showcase {
+  background-position:0vmax;
+  padding: 10px; 
+  }
+}
     </style>

@@ -1,42 +1,186 @@
 ---
 import Card from './Card.astro'
+import crew from '../images/crew-pic.png';
+import guests from '../images/guests.png';
+
 
 const featuresData = [
-    {title:'Zero JavaScript Runtime', 
-    body: 'Astro renders HTML on the server and strips away any remaining,unused JavaScript. '},
+    { image: crew,
+      title:'Captains & Crew', 
+    body: `'We provide you solutions to overcome your challenges, assisting you with the following services:
+
+- preparing and managing administrative documents for your personal records and/or for your vessel; 
+
+-  uniforms, interiors and provisioning requests; 
+-  Maritime & Language Courses - convertion certificates, MCA application, assistance and general  informations; 
+-  seafarer's flight tickets, visas, APA and formalities; 
+-  crew selection & placement 
+-  personal and yachting insurance
+-  technical assistance and shipyard organization
+'`},
     {title:'The Power of Islands ', 
     body: ' Need interactive UI? Load individual, non-blocking component islands in parallel. '},
-    {title:'Lazy-Loading Islands ', 
-    body: 'Components only hydrate when they scroll into view. If you don\'it, Astro won\'t load it. '}
 ];
 
 ---
 
 
-<section class="features">
+<!-- <section class="features">
     <div class="container">
      {featuresData.map(feature => (
         <Card>
-       <h3>{feature.title}</h3>
+        <img src={feature.image} alt="" width="350px">
+        <br>
+       <h3 class="card-title">{feature.title}</h3>
        <p>{feature.body}</p>
       </Card>
      ))}
     </div>
+  </section> -->
+
+ 
+  <section class="text-section">
+    <div class="containerText">
+      <p class="intro-text">     
+    Glam yachting will have your back for any challenge that you may encounter in everyday life at sea, being fast, efficient and providing the excellence that you are looking for.     
+      </p>    
+    </div>
+
+      <div class="containerText"> 
+        <p class="intro-title">
+          Delivering Passion & Happiness 
+        </p>   
+      </div>
+    
+      <div class="containerText">   
+        <p class="intro-text2">     
+          Glam Yachting - <b>Global Logistics & Management</b>, is a new interactive platform which offers dedicated and customized services and provides a dynamic team that will simplify your life at sea. 
+          It  has been founded by ex-captains and personal VIP assistants creating the perfect bond
+          driven by the passion for the oceans and VIP international luxury services, travels and tourism. 
+          The result is an interesting texture of contacts, passion, knowledge & experience able to surprise you in <br><b>“Making the impossible possible!”</b>
+        </p>    
+      </div>
+    </section>
+    <section class="features">
+    <div class="container">
+      
+        <Card>
+        <img class="img" src= {crew} alt="" width="440px">
+        <br>
+       <h3 class="card-title">Captains & Crew</h3>
+       <p>We provide you solutions to overcome your challenges, assisting you with the following services:
+        <ul class="list">
+        <li>- preparing and managing administrative documents for your personal records and/or for your vessel;</li> 
+        
+        <li>-  uniforms, interiors and provisioning requests;</li> 
+        <li>-  Maritime & Language Courses - convertion certificates, MCA application, assistance and general information; </li>
+        <li>-  seafarer's flight tickets, visas, APA and formalities; </li>
+        <li>-  crew selection & placement;</li>
+        <li>-  personal and yachting insurance;</li>
+        <li>-  technical assistance and shipyard organization.</li>    
+      </ul>
+      </p>
+      </Card>
+
+      
+      <Card>
+        <img class="img" src= {guests} alt="" width="440px">
+        <br>
+       <h3 class="card-title">Owners & Charter Guests</h3>
+       <p>We create the desired itinerary for you in order to realize an unforgettable holiday,
+        offering you the following services:        
+        <ul class="list">
+        <li>- private and luxurious charters for an unforgettable holiday;</li>        
+        <li>- events on-board or on land;</li> 
+        <li>- helicopter, private jet’s & VIP transfer bookings & organization; </li>
+        <li>- research and selection of the vessel and crew that meets your requirements; </li>
+        <li>- suggestion and detailed itinerary selection according to your preferences and  the vessel chosen in order to discover the inner beauties hidden around the Med,  Adriatic and Caribbean paradise.</li>  
+      </ul>
+      </p>
+      </Card>
+     
+     
+    </div>
   </section>
 
   <style>
-    .features .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 0 20px;
-  margin: 30px auto;
+
+.text-section {
+  background: var(--color-primary);
+        color: #fff;
 }
 
-@media (max-width: 500px) {
+.intro-text {
+font-size:28px;
+max-width: 800px;
+text-align: center;
+} 
+
+.intro-text2 {
+font-size:18px;
+max-width: 800px;
+text-align: center;
+margin-bottom:80px;
+margin-top:50px;
+} 
+
+.intro-title {
+font-size:40px;
+max-width: 800px;
+text-align: center;
+}
+.container {
+  width:fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 80px;
+  margin: 60px auto;
+}
+
+.containerText {
+  width:fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top:45px;
+  margin: 0px auto;
+}
+
+
+
+@media (max-width: 900px) {
   .features .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    padding:20px;
+
   }
+  .intro-text {
+    font-size:22px;
+  }
+  .containerText {
+    margin-left:30px;
+    margin-right:30px;
+  }
+}
+.list {
+  line-height: 20px;
+}
+.card-title {
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 32px;;
+}
+ul {
+  line-height: 20px;
+}
+li {
+  line-height: 23px;
+  margin: .8rem 0;
+}
+
+.img {
+  border-radius:14px;
 }
   </style>
 

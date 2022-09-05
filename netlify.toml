@@ -1,0 +1,9 @@
+
+[graph]
+targetPort = 8888
+  codeGenerator = "netlify-builtin:astro"
+
+
+
+
+

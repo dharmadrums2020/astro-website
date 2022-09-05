@@ -63,7 +63,9 @@
   .logos-small {
     display: none;
   }
-
+.logos {
+  max-width: 800px;
+}
   /* Page Content */
 .page-content {
   margin: 20px 0;

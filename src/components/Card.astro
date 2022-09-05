@@ -11,16 +11,23 @@ const { dark = false } = Astro.props as Props;
 </div>
 
 <style>
-    .card {
+.card {
+  position:relative;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  max-width:480px;
 }
 
-    .dark {
-        background: var(--color-primary);
-        color: #fff;
-    }
+.card:hover {
+  background: rgba(226, 226, 226, 0.267);
+ border: 1px solid rgb(173, 173, 173);
+}
+
+.dark {
+  background: var(--color-primary);
+  color: #fff;
+}
 </style>

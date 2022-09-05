@@ -1,0 +1,65 @@
+query ExampleQuery @netlify(id: null, doc: null) {
+  __typename
+}
+
+query NpmFindPackageDownloadsQuery($name: String!) @netlify(id: """45c5ee18-c91c-45de-b1f1-89d0aa098226""", doc: """
+Get the downloads for a package (last week, last month, and in the last 24 hours) from npm given the package name.
+""") {
+  npm {
+    package(name: $name) {
+      downloads {
+        lastMonth {
+          count
+        }
+        lastDay {
+          count
+        }
+        lastWeek {
+          count
+        }
+      }
+      description
+    }
+  }
+}
+
+query NpmFindPackageDownloadsQuery($name: String!) @netlify(id: """65b3f834-6323-4fbc-8ac3-6ea78757e06f""", doc: """
+Get the downloads for a package (last week, last month, and in the last 24 hours) from npm given the package name.
+""") {
+  npm {
+    package(name: $name) {
+      downloads {
+        lastMonth {
+          count
+        }
+        lastDay {
+          count
+        }
+        lastWeek {
+          count
+        }
+      }
+    }
+  }
+}
+
+query NpmFindPackageDownloadsQuery($name: String!) @netlify(id: """694b4d70-f226-4704-b6cb-5f98189107be""", doc: """
+Get the downloads for a package (last week, last month, and in the last 24 hours) from npm given the package name.
+""") {
+  npm {
+    package(name: $name) {
+      downloads {
+        lastMonth {
+          count
+        }
+        lastDay {
+          count
+        }
+        lastWeek {
+          count
+        }
+      }
+      description
+    }
+  }
+}

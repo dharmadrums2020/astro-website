@@ -1,5 +1,5 @@
 ---
-import logo from '../images/logo.svg'
+import logo from '../images/logo.png'
 ---
 
 
@@ -12,9 +12,12 @@ import logo from '../images/logo.svg'
       </div>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li class="selected"><a class="selected"href="/">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li class="right-nav"><a href="#">Contact Us</a></li>
+          <li class="navBtn"><a href="#">Registration</a></li>
+          <li class="navBtn"><a href="#">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -22,9 +25,19 @@ import logo from '../images/logo.svg'
 
   <style>
 
+.right-nav {
+  margin-right:30px;
+}
+
+.selected {
+  color: gold!important;
+    font-weight:800;
+}
+
 .header {
   height: 70px;
-  background: var(--color-primary);
+  background: white;
+  padding-right:0px;
 }
 
 .header .container {
@@ -36,7 +49,7 @@ import logo from '../images/logo.svg'
 }
 
 .header img {
-  height: 35px;
+  height:55px;
   vertical-align: middle;
 }
 
@@ -45,11 +58,32 @@ import logo from '../images/logo.svg'
 }
 
 .header nav ul li {
-  padding: 0 10px;
+  padding: 0 25px;
+  text-transform: uppercase;
 }
+
+.header nav ul li a:hover{
+  color: gold;
+}
+
 
 .header nav ul li a {
-  color: #fff;
+  color: #000;
 }
 
+.navBtn {
+  border: 2px solid gold;
+  border-radius: 8px;
+  margin-right: 12px;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.navBtn a{
+  color:black!important;
+}
+.navBtn:hover{
+  background-color: gold;
+  color:black;
+}
   </style>
